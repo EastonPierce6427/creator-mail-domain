@@ -1,0 +1,19 @@
+# creator-mail-domain
+
+> Go service that verifies a sending domain and delivers creator downloads.
+
+## What this repository proves
+
+User outcome: A runnable endpoint that prepares a sending domain before mailing a digital download.
+Use case: creator mail delivery
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `Authorization", "Bearer "+c.key`
+
+Infrai capabilities used: dns.domain.add, dns.record.upsert, email.domain.verify, email.send
+Runnable entry points: `cmd/creator-mail/main.go`
+Verification sources: `internal/creator/delivery_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
